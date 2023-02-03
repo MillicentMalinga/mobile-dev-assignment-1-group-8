@@ -44,6 +44,36 @@ class _MyHomePageState extends State<MyHomePage> {
           // the App.build method, and use it to set our appbar title.
           title: Text(widget.title),
         ),
+        drawer: Drawer(
+          // Add a ListView to the drawer. This ensures the user can scroll
+          // through the options in the drawer if there isn't enough vertical
+          // space to fit everything.
+          child: ListView(
+            // Important: Remove any padding from the ListView.
+            padding: EdgeInsets.zero,
+            children: [
+              const DrawerHeader(
+                decoration: BoxDecoration(
+                  color: Colors.orange,
+                ),
+                child: Text('About Us'),
+              ),
+              ListTile(
+                title: const Text('Our Mission'),
+                onTap: () {
+                  // Currently does nothing
+                },
+              ),
+              ListTile(
+                title: const Text('Careers'),
+                onTap: () {
+                  // Currently does nothing
+                  // ...
+                },
+              ),
+            ],
+          ),
+        ),
         body: Container(
             color: Colors.orange[100],
             // this is the part where we begin working with images, we will use the
@@ -58,10 +88,24 @@ class _MyHomePageState extends State<MyHomePage> {
                 fit: BoxFit.cover,
               ),
             )),
+        // used a combination of a floating action button, and a popup menu
+        // to create a chat bot
         floatingActionButton: FloatingActionButton(
           onPressed: () {},
           hoverColor: Colors.green,
-          child: const Icon(Icons.message),
+          child: PopupMenuButton(
+            itemBuilder: (BuildContext context) {
+              return [
+                PopupMenuItem(
+                  child: TextField(
+                      decoration: InputDecoration(
+                          border: InputBorder.none,
+                          labelText: 'Chat with us',
+                          hintText: 'What can I help you with today?')),
+                )
+              ];
+            },
+          ),
         ));
   }
 }
