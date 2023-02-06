@@ -39,6 +39,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         appBar: AppBar(
           // Here we take the value from the MyHomePage object that was created by
           // the App.build method, and use it to set our appbar title.
@@ -74,20 +75,185 @@ class _MyHomePageState extends State<MyHomePage> {
             ],
           ),
         ),
-        body: Container(
-            color: Colors.orange[100],
-            // this is the part where we begin working with images, we will use the
-            // Image.asset() widget to display the image after storing the images in
-            // assets folder.
-            child: Container(
-              constraints: const BoxConstraints.expand(
-                height: 200.0,
+        body: SingleChildScrollView(
+          // color: Colors.orange[100],
+          // this is the part where we begin working with images, we will use the
+          // Image.asset() widget to display the image after storing the images in
+          // assets folder.
+          child: Column(
+            children: [
+              Container(
+                constraints: const BoxConstraints.expand(
+                  height: 200.0,
+                ),
+                child: Image.asset(
+                  'assets/images/pexels-rajesh-tp-1624487.jpg',
+                  fit: BoxFit.cover,
+                ),
               ),
-              child: Image.asset(
-                'assets/images/pexels-rajesh-tp-1624487.jpg',
-                fit: BoxFit.cover,
-              ),
-            )),
+              GridView.count(
+                  padding: const EdgeInsets.all(20.0),
+                  crossAxisCount: 4,
+                  mainAxisSpacing: 20.0,
+                  crossAxisSpacing: 20.0,
+                  scrollDirection: Axis.vertical,
+                  shrinkWrap: true,
+                  children: [
+                    Card(
+                        child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      // shadowColor: Colors.orange,
+                      // color: Colors.white,
+                      child: Column(children: [
+                        SizedBox(
+                            width: 200.0,
+                            height: 200.0,
+                            child: Column(children: const [
+                              CircleAvatar(
+                                radius: 80.0,
+                                backgroundImage: AssetImage(
+                                    'assets/images/pexels-rajesh-tp-1624487.jpg'),
+                              ),
+                              Text('Chicken\'s Diners',
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.bold,
+                                  )),
+
+                              // this is where we will add the text for the menu items
+                            ]))
+                      ]),
+                    )),
+                    Card(
+                        child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      // shadowColor: Colors.orange,
+                      // color: Colors.white,
+                      child: Column(children: [
+                        SizedBox(
+                            width: 200.0,
+                            height: 200.0,
+                            child: Column(children: const [
+                              CircleAvatar(
+                                radius: 80.0,
+                                backgroundImage: AssetImage(
+                                    'assets/images/pexels-rajesh-tp-1624487.jpg'),
+                              ),
+                              Text('Chicken\'s Diners',
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.bold,
+                                  )),
+
+                              // this is where we will add the text for the menu items
+                            ]))
+                      ]),
+                    )),
+                    Card(
+                        child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      // shadowColor: Colors.orange,
+                      // color: Colors.white,
+                      child: Column(children: [
+                        SizedBox(
+                            width: 200.0,
+                            height: 200.0,
+                            child: Column(children: const [
+                              CircleAvatar(
+                                radius: 80.0,
+                                backgroundImage: AssetImage(
+                                    'assets/images/pexels-rajesh-tp-1624487.jpg'),
+                              ),
+                              Text('Chicken\'s Diners',
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.bold,
+                                  )),
+
+                              // this is where we will add the text for the menu items
+                            ]))
+                      ]),
+                    )),
+                    Card(
+                        child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      // shadowColor: Colors.orange,
+                      // color: Colors.white,
+                      child: Column(children: [
+                        SizedBox(
+                            width: 200.0,
+                            height: 200.0,
+                            child: Column(children: const [
+                              CircleAvatar(
+                                radius: 80.0,
+                                backgroundImage: AssetImage(
+                                    'assets/images/pexels-rajesh-tp-1624487.jpg'),
+                              ),
+                              Text('Chicken\'s Diners',
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.bold,
+                                  )),
+
+                              // this is where we will add the text for the menu items
+                            ]))
+                      ]),
+                    )),
+                    Card(
+                        child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      // shadowColor: Colors.orange,
+                      // color: Colors.white,
+                      child: Column(children: [
+                        SizedBox(
+                            width: 200.0,
+                            height: 200.0,
+                            child: Column(children: const [
+                              CircleAvatar(
+                                radius: 80.0,
+                                backgroundImage: AssetImage(
+                                    'assets/images/pexels-rajesh-tp-1624487.jpg'),
+                              ),
+                              Text('Chicken\'s Diners',
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.bold,
+                                  )),
+
+                              // this is where we will add the text for the menu items
+                            ]))
+                      ]),
+                    )),
+                    Card(
+                        child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      // shadowColor: Colors.orange,
+                      // color: Colors.white,
+                      child: Column(children: [
+                        SizedBox(
+                            width: 200.0,
+                            height: 200.0,
+                            child: Column(children: const [
+                              CircleAvatar(
+                                radius: 80.0,
+                                backgroundImage: AssetImage(
+                                    'assets/images/pexels-rajesh-tp-1624487.jpg'),
+                              ),
+                              Text('Samosa Madness',
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.bold,
+                                  )),
+
+                              // this is where we will add the text for the menu items
+                            ]))
+                      ]),
+                    ))
+                  ])
+            ],
+          ),
+        ),
+
         // used a combination of a floating action button, and a popup menu
         // to create a chat bot
         floatingActionButton: FloatingActionButton(
@@ -96,7 +262,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child: PopupMenuButton(
             itemBuilder: (BuildContext context) {
               return [
-                PopupMenuItem(
+                const PopupMenuItem(
                   child: TextField(
                       decoration: InputDecoration(
                           border: InputBorder.none,
