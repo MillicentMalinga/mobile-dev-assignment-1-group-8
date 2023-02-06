@@ -272,6 +272,24 @@ class _MyHomePageState extends State<MyHomePage> {
               ];
             },
           ),
+        ),
+        // implementing a bottom navigation. Does not do anything yet
+
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_cart),
+              label: 'Cart',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person),
+              label: 'Profile',
+            ),
+          ],
         ));
   }
 }
