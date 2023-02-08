@@ -7,7 +7,7 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
+  // This widget is the root of our application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -35,13 +35,14 @@ class _MyHomePageState extends State<MyHomePage> {
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
+    // The Flutter framework has been optimized to make rerunning build methods fast
+    // so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
+    
     return Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
-          // Here we take the value from the MyHomePage object that was created by
+          // We take the value from the MyHomePage object that was created by
           // the App.build method, and use it to set our appbar title.
           title: Text(widget.title),
         ),
