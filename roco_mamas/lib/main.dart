@@ -38,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods fast
     // so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-    
+
     return Scaffold(
         resizeToAvoidBottomInset: false,
         appBar: AppBar(
@@ -84,8 +84,9 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             children: [
               Container(
+                margin: const EdgeInsets.all(40),
                 constraints: const BoxConstraints.expand(
-                  height: 200.0,
+                  height: 700.0,
                 ),
                 child: Image.asset(
                   'assets/images/pexels-rajesh-tp-1624487.jpg',
