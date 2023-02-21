@@ -90,14 +90,14 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 child: Image.asset(
                   'assets/images/pexels-rajesh-tp-1624487.jpg',
-                  fit: BoxFit.cover,
+                  fit: BoxFit.fill,
                 ),
               ),
               GridView.count(
                   padding: const EdgeInsets.all(20.0),
-                  crossAxisCount: 4,
-                  mainAxisSpacing: 20.0,
-                  crossAxisSpacing: 20.0,
+                  crossAxisCount: 3,
+                  mainAxisSpacing: 10.0,
+                  crossAxisSpacing: 10.0,
                   scrollDirection: Axis.vertical,
                   shrinkWrap: true,
                   children: [
@@ -109,12 +109,17 @@ class _MyHomePageState extends State<MyHomePage> {
                       child: Column(children: [
                         SizedBox(
                             width: 200.0,
-                            height: 200.0,
-                            child: Column(children: const [
-                              CircleAvatar(
-                                radius: 80.0,
-                                backgroundImage: AssetImage(
-                                    'assets/images/pexels-rajesh-tp-1624487.jpg'),
+                            height: 250.0,
+                            child: Column(children: [
+                              Container(
+                                height: 200,
+                                width: 175,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    image: DecorationImage(
+                                        image: AssetImage(
+                                            "assets/images/toa-heftiba-inDRPMBfX8M-unsplash.jpg"),
+                                        fit: BoxFit.cover)),
                               ),
                               Text('Chicken\'s Diners',
                                   style: TextStyle(
